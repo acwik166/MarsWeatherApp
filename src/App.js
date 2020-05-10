@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card';
+import Navbar from './components/Navbar';
+import LineChart from './components/LineChart';
 
-function App() {
+import { WeatherProvider } from './context/WeatherContext';
+import { MetricProvider } from './context/MetricContext';
+
+import './styles/App.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <WeatherProvider>
+      <MetricProvider>
+        <Navbar />
+        <div className="container">
+          <Card />
+          <LineChart />
+        </div>
+      </MetricProvider>
+    </WeatherProvider>
+  )
 }
 
 export default App;
