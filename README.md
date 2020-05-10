@@ -10,6 +10,7 @@ Simple app made with react.js and bootstrap to check weather on mars.
 * ```git clone https://github.com/acwik166/MarsWeatherApp.git```
 * Install dependencies
 ### Running
+* You will need to create account to generate your api acces key
 * ```cd mars_weather```
 * ```npm start```
 # References
