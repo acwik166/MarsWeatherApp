@@ -9,7 +9,7 @@ export const WeatherProvider = ({ children }) => {
     const [weatherData, setWeatherData] = useState();
 
     useEffect(() => {
-        const api_key = 'MSgrn9zphEsxdWju3ZHNtGonz26r2LaIzZWlEmIa';
+        const api_key = 'YOUR_API_KEY';
         const url = `https://api.nasa.gov/insight_weather/?api_key=${api_key}&feedtype=json&ver=1.0`;
         fetch(url)
         .then((response) => response.json())
